@@ -1,0 +1,35 @@
+{
+  "name": "github-action-regression-testing",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "start": "pnpm storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "playwright test",
+    "test:update": "playwright test --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@storybook/addon-essentials": "^8.1.11",
+    "@storybook/addon-links": "^8.1.11",
+    "@storybook/blocks": "^8.1.11",
+    "@storybook/manager-api": "^8.1.11",
+    "@storybook/test": "^8.1.11",
+    "@storybook/theming": "^8.1.11",
+    "@storybook/web-components": "^8.1.11",
+    "@storybook/web-components-vite": "^8.1.11",
+    "@types/node": "^20.14.9",
+    "lit": "^3.1.4",
+    "prettier": "^3.3.2",
+    "storybook": "^8.1.11"
+  },
+  "dependencies": {
+    "@crowdstrike/glide-core": "^0.9.1"
+  },
+  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631"
+}

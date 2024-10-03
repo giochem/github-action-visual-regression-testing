@@ -1,0 +1,12 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+.DS_Store
+
+# compiled output
+storybook-static/
+
+# dependencies
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

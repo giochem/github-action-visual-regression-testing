@@ -5,8 +5,17 @@ on:
 jobs:
   update-snapshots:
     name: Update Snapshots
+
     if: github.event.issue.pull_request && contains(github.event.comment.body, '/approve-snapshots')
+
     runs-on: ubuntu-latest
+
+    permissions:
+      # Required for stefanzweifel/git-auto-commit-action@v5
+      # so that it can commit and push the added or changed
+      # files to the repository.
+      contents: write
+
     steps:
       - name: Get branch of PR
         uses: xt0rted/pull-request-comment-branch@v2

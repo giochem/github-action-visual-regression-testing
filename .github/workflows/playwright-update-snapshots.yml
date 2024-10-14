@@ -1,9 +1,7 @@
 name: Update Snapshots on Comment
-
 on:
   issue_comment:
     types: [created]
-
 jobs:
   update-snapshots:
     name: Update Snapshots

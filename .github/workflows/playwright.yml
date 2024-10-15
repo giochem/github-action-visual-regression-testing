@@ -5,9 +5,20 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  Playwright:
+  playwright:
     timeout-minutes: 60
+
     runs-on: ubuntu-latest
+
+    permissions:
+      # Required for stefanzweifel/git-auto-commit-action@v5
+      # so that it can commit and push the added or changed
+      # files to the repository.
+      contents: write
+      # Required for thollander/actions-comment-pull-request@v3
+      # https://github.com/thollander/actions-comment-pull-request?tab=readme-ov-file#permissions
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -50,4 +50,3 @@ jobs:
         with:
           message: |
             ### 🎉 Successfully updated and committed Playwright snapshots! 🎉
-          comment-tag: execution

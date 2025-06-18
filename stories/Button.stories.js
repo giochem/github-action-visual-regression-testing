@@ -8,7 +8,7 @@ export default {
     'slot="default"': 'Button',
     disabled: false,
     variant: 'primary',
-    size: 'large',
+    size: 'tertiary',
   },
   render: (args) =>
     html` <glide-core-button

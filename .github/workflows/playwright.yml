@@ -48,7 +48,7 @@ jobs:
           path: playwright-report/
           retention-days: 30
       - name: Comment on PR with report link
-        uses: thollander/actions-comment-pull-request@v3
+        uses: giochem/actions-comment-pull-request@v3
         if: ${{ failure() && env.SNAPSHOT_DIFFERENCES == 'true' }}
         with:
           message: |
